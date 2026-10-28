@@ -21,11 +21,14 @@ const menuOpen = ref(false)
       /></a>
       <button
         class="menu-toggle"
+        :aria-label="menuOpen ? 'Chiudi menu' : 'Apri menu'"
         :aria-expanded="menuOpen"
         aria-controls="navigation"
         @click="menuOpen = !menuOpen"
       >
-        {{ menuOpen ? 'Chiudi menu' : 'Menu' }}
+        <span class="menu-icon" :class="{ open: menuOpen }" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
       </button>
       <nav
         id="navigation"

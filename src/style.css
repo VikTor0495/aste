@@ -186,6 +186,33 @@ nav a[aria-current] {
   display: none;
 }
 
+.menu-icon {
+  display: grid;
+  gap: 5px;
+  width: 24px;
+}
+
+.menu-icon span {
+  display: block;
+  height: 2px;
+  background: var(--deep);
+  transition:
+    transform 0.18s ease,
+    opacity 0.18s ease;
+}
+
+.menu-icon.open span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open span:last-child {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
