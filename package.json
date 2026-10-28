@@ -1,0 +1,20 @@
+{
+  "name": "aste-residenza",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build && vite build --ssr src/entry-server.js --outDir .ssr && node scripts/prerender.mjs",
+    "preview": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs",
+    "format": "prettier --write src scripts vite.config.js index.html"
+  },
+  "dependencies": {
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.0",
+    "prettier": "^3.9.10",
+    "vite": "^7.0.0"
+  }
+}
