@@ -21,7 +21,7 @@ La preview di produzione è su http://127.0.0.1:4173. `dist/` contiene le otto p
 
 ## Pubblicazione
 
-Pubblicare esclusivamente `dist/`. Configurare l'hosting per servire gli `index.html` delle directory senza cambiare gli URL canonici e usare `404.html` con status 404. `_redirects` è compatibile con hosting che supportano quel formato; su altri server tradurre le cinque regole in redirect HTTP 301. Non usare un fallback SPA con status 200 per pagine inesistenti. Il dominio canonico è `https://www.casadiriposoaste.com`; verificare sul server reale il redirect HTTP e non-www verso questo dominio, mantenendo percorso e query.
+Pubblicare esclusivamente `dist/`. Configurare l'hosting per servire gli `index.html` delle directory senza cambiare gli URL canonici e usare `404.html` con status 404. Su Vercel `vercel.json` imposta il comando di build, la cartella `dist/` e i redirect permanenti dalle vecchie pagine `.html`. `dist/_redirects` è mantenuto per hosting compatibili con quel formato. Non usare un fallback SPA con status 200 per pagine inesistenti. Il dominio canonico è `https://www.casadiriposoaste.com`; verificare sul server reale il redirect HTTP e non-www verso questo dominio, mantenendo percorso e query.
 
 L'invio del vecchio form era simulato. Il nuovo sito permette contatti telefonici e via email reali; un modulo server richiederà un servizio di consegna e un'informativa adeguata. Non vengono incorporati mappe, font o widget esterni; Maps e Facebook sono collegamenti.
 

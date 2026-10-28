@@ -66,3 +66,8 @@ Ancora da completare: audit finale di contenuti e metadati rispetto al sito orig
 Non sono disponibili Search Console, dati di traffico, configurazione hosting e credenziali di produzione. Pertanto non sono verificati posizionamento, URL fuori dalla sitemap, backlink, redirect del dominio reale e Core Web Vitals di produzione. Nessuna pubblicazione è stata eseguita. I redirect del server e la policy del fornitore vanno adattati all'hosting effettivamente scelto. Non si inventano dati su disponibilità, organici attuali o validità corrente degli accreditamenti.
 
 Verifica HTTP finale sulla preview: tutte le otto pagine restituiscono 200 e contengono il relativo titolo principale; tutti i cinque alias restituiscono 301 con destinazione corretta; un percorso inesistente restituisce 404. `git diff --check` superato.
+
+
+## Vercel
+
+`vercel.json` dichiara la build `npm run build`, output `dist` e cinque redirect permanenti dagli URL `.html` del precedente progetto locale. La configurazione è presente nel repository e la build/check locali passano. Il deployment Vercel e il collegamento del dominio non sono stati eseguiti.

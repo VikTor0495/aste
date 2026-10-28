@@ -1,0 +1,12 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/struttura.html", "destination": "/la-struttura", "permanent": true },
+    { "source": "/camere.html", "destination": "/camere-gallery", "permanent": true },
+    { "source": "/attivita.html", "destination": "/servizi/animazione-gallery", "permanent": true },
+    { "source": "/giardino.html", "destination": "/servizi/giardino-gallery", "permanent": true }
+  ]
+}
